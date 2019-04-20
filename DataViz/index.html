@@ -111,6 +111,7 @@ title: Dogs of New York City
     
      <script type="text/javascript">
       var yourV2Spec = {
+  {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.1.json",
   "width": 500,
   "height": 300,
@@ -119,7 +120,7 @@ title: Dogs of New York City
     "format": {
       "property": "features"
     }
-  },	      
+  },
   "projection": {
     "type": "albersUsa"
   },
@@ -141,34 +142,25 @@ title: Dogs of New York City
       }
     }
   ],
+  "selection": {
+    "highlight": {"type": "single"}
+  },
   "mark": "geoshape",
   "encoding": {
     "color": {
       "field": "Count",
       "type": "quantitative"
     },
-    "tooltip": [
-      {
-        "field": "Borough",
-        "type": "nominal"
-      },
-      {
-        "field": "Pop_Dog1",
-        "type": "nominal"
-      },
-      {
-        "field": "Pop_Dog2",
-        "type": "nominal"
-      },
-      {
-        "field": "Pop_Dog3",
-        "type": "nominal"
-      }
-    ],
-	opacity": {
-      		"condition": {"selection": "highlight", "value": 1},
-      		"value": 0.5
-  		}
+    "tooltip": 
+      [
+        {"field": "Borough","type": "nominal"},
+        {"field": "Pop_Dog1","type": "nominal"},
+        {"field": "Pop_Dog2","type": "nominal"},
+        {"field": "Pop_Dog3","type": "nominal"}
+      ],
+    "opacity": {"condition": {"selection": "highlight", "value": 1},
+      "value": 0.5}
+  }
 }
 ;
       vegaEmbed('#vis2', yourV2Spec);
