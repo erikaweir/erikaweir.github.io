@@ -2,19 +2,13 @@
 layout: default
 title: Dogs of New York City
 ---
-<head>
-    <title>{{page.title}}</title>
+  <head>
+    <title>Embedding Vega-Lite</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.3.5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.2.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@4.0.0"></script>
   </head>
   <body>
-	  <div class="stuff">
-		  <h2>Data Visualization of Dogs in NYC</h2>
-		  <ul>
-			<li><a href="http://guides.library.illinois.edu/balticdigitalcollec"> This is a list of our data sources.</a></li>
-        	</ul>
-	</div>
     <div id="vis"></div>
 
     <script type="text/javascript">
@@ -111,7 +105,6 @@ title: Dogs of New York City
     
      <script type="text/javascript">
       var yourV2Spec = {
-  {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.1.json",
   "width": 500,
   "height": 300,
@@ -518,4 +511,4 @@ title: Dogs of New York City
       vegaEmbed('#vis4', yourV4Spec);
     </script>
     
- </body>
+</body>
