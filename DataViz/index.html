@@ -18,73 +18,52 @@ title: Dogs of New York City
     <div id="vis"></div>
 
     <script type="text/javascript">
-      var yourVlSpec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.1.json",
-  "width": 500,
-  "height": 300,
-  "data": {
-    "url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Borough%20Boundaries.geojson",
-    "format": {
-      "property": "features"
-    }
-  },
-  "projection": {
-    "type": "albersUsa"
-  },
-  "transform": [
-    {
-      "lookup": "properties.boro_name",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Breeds_by_Borough.csv"
-        },
-        "key": "Borough",
-        "fields": [
-          "Count",
-          "Borough",
-          "Pop_Dog1",
-          "Pop_Dog2",
-          "Pop_Dog3"
-        ]
-      }
-    }
-  ],
-  "mark": "geoshape",
-  "encoding": {
-    "color": {
-      "field": "Count",
-      "type": "quantitative"
-    },
-    "tooltip": [
-      {
-        "field": "Borough",
-        "type": "nominal"
-      },
-      {
-        "field": "Pop_Dog1",
-        "type": "nominal"
-      },
-      {
-        "field": "Pop_Dog2",
-        "type": "nominal"
-      },
-      {
-        "field": "Pop_Dog3",
-        "type": "nominal"
-      }
-    ]
-  }
-}
-;
+      var yourVlSpec = {"$schema": "https://vega.github.io/schema/vega-lite/v2.1.json",
+			"description": 'A map of NYC by Dog Population.',
+  			"width": 500,
+  			"height": 300,
+  			"data": {"url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Borough%20Boundaries.geojson",
+    			"format": {
+     				 "property": "features"
+ 				 },
+  			"projection": {"type": "albersUsa"},
+  			"transform": [
+   					 {
+      						"lookup": "properties.boro_name",
+      						"from": {
+        						"data": { "url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Breeds_by_Borough.csv"},
+       						"key": "Borough",
+       						"fields": [
+          						"Count",
+         						"Borough",
+          						"Pop_Dog1",
+          						"Pop_Dog2",
+          						"Pop_Dog3"
+        						]
+							}
+   							 }
+ 						 ],
+  						"mark": "geoshape",
+ 						"encoding": {
+    							"color": {
+      								"field": "Count",
+      								"type": "quantitative"
+    								},
+   						 "tooltip": [
+      								{"field": "Borough","type": "nominal"},
+      								{"field": "Pop_Dog1","type": "nominal"},
+      								{ "field": "Pop_Dog2","type": "nominal"},
+     								 {"field": "Pop_Dog3","type": "nominal"}
+    							]
+ 							 }
+					};
       vegaEmbed('#vis', yourVlSpec);
     </script>
-  </body>
-		<h2>Human Population</h2>
-		<div id="vis"></div>
+	<h2>Human Population</h2>
+	div id="vis"></div>
 
-    <script type="text/javascript">
-      var yourVlSpec = {{
-  "title": "NYC Population by Borough",
+    		<script type="text/javascript">
+      			var yourV2Spec = {{"title": "NYC Population by Borough",
   "width": 150,
   "height": 300,
   "data": {
@@ -284,7 +263,7 @@ title: Dogs of New York City
     }
   }
 };
-      vegaEmbed('#vis', yourVlSpec);
+      vegaEmbed('#vis', yourV2Spec);
     </script>
 	</div>
 	<div class="right"></div>
