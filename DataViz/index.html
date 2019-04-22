@@ -505,4 +505,97 @@ title: Dogs of New York City
       vegaEmbed('#vis4', yourV4Spec);
     </script>
     
+     <div id="vis5"></div>
+
+    <script type="text/javascript">
+      var yourV5Spec = {{
+  "title": "NYC Human vs. Dog Population by Borough",
+  "width": 150,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "Borough": "Bronx",
+        "Population": 1385108,
+        "Population Type": "Humans",
+        "year": 2010
+      },
+      {
+        "Borough": "Brooklyn",
+        "Population": 2552911,
+        "Population Type": "Humans",
+        "year": 2010
+      },
+      {
+        "Borough": "Manhattan",
+        "Population": 1585873,
+        "Population Type": "Humans",
+        "year": 2010
+      },
+      {
+        "Borough": "Queens",
+        "Population": 2250002,
+        "Population Type": "Humans",
+        "year": 2010
+      },
+      {
+        "Borough": "Staten Island",
+        "Population": 468730,
+        "Population Type": "Humans",
+        "year": 2010
+      },
+      {
+        "Borough": "Bronx",
+        "Population": 12613,
+        "Population Type": "Dogs",
+        "year": 2010
+      },
+      {
+        "Borough": "Brooklyn",
+        "Population": 30351,
+        "Population Type": "Dogs",
+        "year": 2010
+      },
+      {
+        "Borough": "Manhattan",
+        "Population": 42607,
+        "Population Type": "Dogs",
+        "year": 2010
+      },
+      {
+        "Borough": "Queens",
+        "Population": 25139,
+        "Population Type": "Dogs",
+        "year": 2010
+      },
+      {
+        "Borough": "Staten Island",
+        "Population": 11155,
+        "Population Type": "Dogs",
+        "year": 2010
+      }
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "column": {
+      "field": "Borough"
+    },
+    "x": {
+      "field": "Population Type",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "Population",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Population Type",
+      "type": "ordinal"
+    }
+  }
+}};
+       vegaEmbed('#vis4', yourV4Spec);
+    </script>
+    
 </body>
