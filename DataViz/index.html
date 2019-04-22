@@ -12,8 +12,66 @@ title: Dogs of New York City
   <body>
     <h1>{{ page.title }}</h1>
     <div class="stuff">
-      <p class="head">The City of New York requires by law that all dog owners submit a license to the Department of Health and Mental Hygiene. The law also requires that owners update their license each year; therefore, these licenses can give a fairly accurate picture of the City of New York’s canine population. Using a data set of dog licenses available from 2016, the below visualizations seek to provide better insight into the canine population of New York. </p>
+      <p class="head">The City of New York requires by law that all dog owners submit a license to the Department of Health and Mental Hygiene. The law also requires that owners update their license each year; therefore, these licenses can give a fairly accurate picture of the City of New York’s canine population. Using a data set of dog licenses available from 2016, the below visualizations seek to provide better insight into the canine population of New York.</p>
     </div>
+    <div id="vis2"></div>
+    
+     <script type="text/javascript">
+      var yourV2Spec ={
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.1.json",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Borough%20Boundaries.geojson",
+    "format": {
+      "property": "features"
+    }
+  },
+  "title": {'Dogs by Borough'}
+  "projection": {
+    "type": "albersUsa"
+  },
+  "transform": [
+    {
+      "lookup": "properties.boro_name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Breeds_by_Borough.csv"
+        },
+        "key": "Borough",
+        "fields": [
+          "Count",
+          "Borough",
+          "Pop_Dog1",
+          "Pop_Dog2",
+          "Pop_Dog3"
+        ]
+      }
+    }
+  ],
+  "selection": {
+    "highlight": {"type": "single"}
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "Count",
+      "type": "quantitative"
+    },
+    "tooltip": 
+      [
+        {"field": "Borough","type": "nominal"},
+        {"field": "Pop_Dog1","type": "nominal"},
+        {"field": "Pop_Dog2","type": "nominal"},
+        {"field": "Pop_Dog3","type": "nominal"}
+      ],
+    "opacity": {"condition": {"selection": "highlight", "value": 1},
+      "value": 0.5}
+  }
+}
+;
+      vegaEmbed('#vis2', yourV2Spec);
+    </script>
     <div id="vis"></div>
 
     <script type="text/javascript">
@@ -99,63 +157,7 @@ title: Dogs of New York City
     
     </script>
     
-    <div id="vis2"></div>
     
-     <script type="text/javascript">
-      var yourV2Spec ={
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.1.json",
-  "width": 500,
-  "height": 300,
-  "data": {
-    "url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Borough%20Boundaries.geojson",
-    "format": {
-      "property": "features"
-    }
-  },
-  "projection": {
-    "type": "albersUsa"
-  },
-  "transform": [
-    {
-      "lookup": "properties.boro_name",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/Breeds_by_Borough.csv"
-        },
-        "key": "Borough",
-        "fields": [
-          "Count",
-          "Borough",
-          "Pop_Dog1",
-          "Pop_Dog2",
-          "Pop_Dog3"
-        ]
-      }
-    }
-  ],
-  "selection": {
-    "highlight": {"type": "single"}
-  },
-  "mark": "geoshape",
-  "encoding": {
-    "color": {
-      "field": "Count",
-      "type": "quantitative"
-    },
-    "tooltip": 
-      [
-        {"field": "Borough","type": "nominal"},
-        {"field": "Pop_Dog1","type": "nominal"},
-        {"field": "Pop_Dog2","type": "nominal"},
-        {"field": "Pop_Dog3","type": "nominal"}
-      ],
-    "opacity": {"condition": {"selection": "highlight", "value": 1},
-      "value": 0.5}
-  }
-}
-;
-      vegaEmbed('#vis2', yourV2Spec);
-    </script>
     
     <div id="vis"></div>
 
