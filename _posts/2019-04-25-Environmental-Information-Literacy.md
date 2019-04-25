@@ -14,4 +14,4 @@ When working on environmental issues, I learned these skills through a combinati
 In our current moment of extreme environmental degradation, it can be quite easy to lose sight of our role in creating a more livable planet. However, Bill McKibben recently argued, “we’re capable of acting together to do remarkable things” and I believe equipping our communities with the skills to both understand and advocate for their local environment can play and incredibly important role in accomplishing the remarkable things necessary at this moment. 
 
 
-Happy Earth Week! 
+**Happy Earth Week!**
