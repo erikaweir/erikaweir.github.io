@@ -79,230 +79,10 @@ title: Dogs of New York City
       <p class="head">The heatmap above shows the dog population by borough and also includes information about the most popular breeds by borough. Manhattan has by far, the largest dog population with 42,607 licensed dogs. It is the followed by Brooklyn, Queens, the Bronx, and Staten Island respectively. Among all of the boroughs, Yorkshire Terrier ranks as the most popular dog breeds. However, each borough varies among the second and third most popular dog breeds.</p>
     </div>
  
+   
     
-    <div id="vis3"></div>
-
-    <script type="text/javascript">
-      var yourV3Spec ={
-  "title": "NYC Population by Borough",
-  "width": 150,
-  "height": 300,
-  "data": {
-    "values": [
-      {
-        "Borough": "Bronx",
-        "Population": 1451277,
-        "year": 1950
-      },
-      {
-        "Borough": "Brooklyn",
-        "Population": 2738175,
-        "year": 1950
-      },
-      {
-        "Borough": "Manhattan",
-        "Population": 1960101,
-        "year": 1950
-      },
-      {
-        "Borough": "Queens",
-        "Population": 1550849,
-        "year": 1950
-      },
-      {
-        "Borough": "Staten Island",
-        "Population": 191555,
-        "year": 1950
-      },
-      {
-        "Borough": "Bronx",
-        "Population": 1424815,
-        "year": 1960
-      },
-      {
-        "Borough": "Brooklyn",
-        "Population": 2627319,
-        "year": 1960
-      },
-      {
-        "Borough": "Manhattan",
-        "Population": 1698281,
-        "year": 1960
-      },
-      {
-        "Borough": "Queens",
-        "Population": 1809578,
-        "year": 1960
-      },
-      {
-        "Borough": "Staten Island",
-        "Population": 221991,
-        "year": 1960
-      },
-      {
-        "Borough": "Bronx",
-        "Population": 1471701,
-        "year": 1970
-      },
-      {
-        "Borough": "Brooklyn",
-        "Population": 2602012,
-        "year": 1970
-      },
-      {
-        "Borough": "Manhattan",
-        "Population": 1539233,
-        "year": 1970
-      },
-      {
-        "Borough": "Queens",
-        "Population": 1986473,
-        "year": 1970
-      },
-      {
-        "Borough": "Staten Island",
-        "Population": 295443,
-        "year": 1970
-      },
-      {
-        "Borough": "Bronx",
-        "Population": 1168972,
-        "year": 1980
-      },
-      {
-        "Borough": "Brooklyn",
-        "Population": 2230936,
-        "year": 1980
-      },
-      {
-        "Borough": "Manhattan",
-        "Population": 1428285,
-        "year": 1980
-      },
-      {
-        "Borough": "Queens",
-        "Population": 1891325,
-        "year": 1980
-      },
-      {
-        "Borough": "Staten Island",
-        "Population": 352121,
-        "year": 1980
-      },
-      {
-        "Borough": "Bronx",
-        "Population": 1203789,
-        "year": 1990
-      },
-      {
-        "Borough": "Brooklyn",
-        "Population": 2300664,
-        "year": 1990
-      },
-      {
-        "Borough": "Manhattan",
-        "Population": 1487536,
-        "year": 1990
-      },
-      {
-        "Borough": "Queens",
-        "Population": 1951598,
-        "year": 1990
-      },
-      {
-        "Borough": "Staten Island",
-        "Population": 378977,
-        "year": 1990
-      },
-      {
-        "Borough": "Bronx",
-        "Population": 1332650,
-        "year": 2000
-      },
-      {
-        "Borough": "Brooklyn",
-        "Population": 2465326,
-        "year": 2000
-      },
-      {
-        "Borough": "Manhattan",
-        "Population": 1537195,
-        "year": 2000
-      },
-      {
-        "Borough": "Queens",
-        "Population": 2229379,
-        "year": 2000
-      },
-      {
-        "Borough": "Staten Island",
-        "Population": 443728,
-        "year": 2000
-      },
-      {
-        "Borough": "Bronx",
-        "Population": 1385108,
-        "year": 2010
-      },
-      {
-        "Borough": "Brooklyn",
-        "Population": 2552911,
-        "year": 2010
-      },
-      {
-        "Borough": "Manhattan",
-        "Population": 1585873,
-        "year": 2010
-      },
-      {
-        "Borough": "Queens",
-        "Population": 2250002,
-        "year": 2010
-      },
-      {
-        "Borough": "Staten Island",
-        "Population": 468730,
-        "year": 2010
-      }
-    ]
-  },
-  "mark": "bar",
-  "encoding": {
-    "column": {
-      "field": "year",
-      "type": "ordinal"
-    },
-    "x": {
-      "field": "Borough",
-      "type": "nominal"
-    },
-    "y": {
-      "field": "Population",
-      "type": "quantitative"
-    },
-    "color": {
-      "field": "Borough",
-      "type": "nominal",
-      "legend": null,
-      "scale": {
-        "range": [
-          "#EFF5B7",
-          "#3E88AB",
-          "#16296C",
-          "#5FADAF",
-          "#EFF5B7"
-        ]
-      }
-    }
-  }
-}
-;
-      vegaEmbed('#vis3', yourV3Spec);
-    </script>
-    
-     <div id="vis4"></div>
-
-    <script type="text/javascript">
+    <div id="vis4"></div>
+        <script type="text/javascript">
       var yourV4Spec = {
   //"$schema": "https://vega.github.io/schema/vega-lite/v3.json",
   "data": {
@@ -338,10 +118,7 @@ title: Dogs of New York City
 ;
       vegaEmbed('#vis4', yourV4Spec);
     </script>
-    
-    <div class="stuff">
-      <p class="head">The number of dogs in each borough does not appear to correlate with the human population. Despite having the largest dog population in 2016, Manhattan ranked as only the third most populous borough in 2010. Furthermore, the incidence of dog bites was highest among the three boroughs with the highest population of dogs: Manhattan, Queens, and Brooklyn. Although, reporting’s of dog bites were slightly higher in Queens this may be related to a variety of factors and may not indicate that dogs are more aggressive or actually bite more frequently in this borough.</p>
-    </div>
+      
       
     <div id="vis7"></div>
       <script type="text/javascript">
@@ -384,15 +161,238 @@ title: Dogs of New York City
           "field": "Breed",
           "type": "nominal",
           "scale": {
-          "range": ["#594F4F", "#547980", "#45ADA8", "#A2D4AB", "#E5EEC1"]
+          "range": ["#565264", "#706677", "#A6808C", "#CCB7AE", "#D6CFCB"]
           }
           }
           }
           }
           ;
           vegaEmbed('#vis7', yourV7Spec);  
+     </script>
+      
+    <div class="stuff">
+      <p class="head">The number of dogs in each borough does not appear to correlate with the human population. Despite having the largest dog population in 2016, Manhattan ranked as only the third most populous borough in 2010. Furthermore, the incidence of dog bites was highest among the three boroughs with the highest population of dogs: Manhattan, Queens, and Brooklyn. Although, reporting’s of dog bites were slightly higher in Queens this may be related to a variety of factors and may not indicate that dogs are more aggressive or actually bite more frequently in this borough.</p>
+    </div>
+      
+    <div id="vis3"></div>
+      <script type="text/javascript">
+          var yourV3Spec ={
+          "title": "NYC Population by Borough",
+          "width": 150,
+          "height": 300,
+          "data": {
+          "values": [
+          {
+          "Borough": "Bronx",
+          "Population": 1451277,
+          "year": 1950
+          },
+          {
+          "Borough": "Brooklyn",
+          "Population": 2738175,
+          "year": 1950
+          },
+          {
+          "Borough": "Manhattan",
+          "Population": 1960101,
+          "year": 1950
+          },
+          {
+          "Borough": "Queens",
+          "Population": 1550849,
+          "year": 1950
+          },
+          {
+          "Borough": "Staten Island",
+          "Population": 191555,
+          "year": 1950
+          },
+          {
+          "Borough": "Bronx",
+          "Population": 1424815,
+          "year": 1960
+          },
+          {
+          "Borough": "Brooklyn",
+          "Population": 2627319,
+          "year": 1960
+          },
+          {
+          "Borough": "Manhattan",
+          "Population": 1698281,
+          "year": 1960
+          },
+          {
+          "Borough": "Queens",
+          "Population": 1809578,
+          "year": 1960
+          },
+          {
+          "Borough": "Staten Island",
+          "Population": 221991,
+          "year": 1960
+          },
+          {
+          "Borough": "Bronx",
+          "Population": 1471701,
+          "year": 1970
+          },
+          {
+          "Borough": "Brooklyn",
+          "Population": 2602012,
+          "year": 1970
+          },
+          {
+          "Borough": "Manhattan",
+          "Population": 1539233,
+          "year": 1970
+          },
+          {
+          "Borough": "Queens",
+          "Population": 1986473,
+          "year": 1970
+          },
+          {
+          "Borough": "Staten Island",
+          "Population": 295443,
+          "year": 1970
+          },
+          {
+          "Borough": "Bronx",
+          "Population": 1168972,
+          "year": 1980
+          },
+          {
+          "Borough": "Brooklyn",
+          "Population": 2230936,
+          "year": 1980
+          },
+          {
+          "Borough": "Manhattan",
+          "Population": 1428285,
+          "year": 1980
+          },
+          {
+          "Borough": "Queens",
+          "Population": 1891325,
+          "year": 1980
+          },
+          {
+          "Borough": "Staten Island",
+          "Population": 352121,
+          "year": 1980
+          },
+          {
+          "Borough": "Bronx",
+          "Population": 1203789,
+          "year": 1990
+          },
+          {
+          "Borough": "Brooklyn",
+          "Population": 2300664,
+          "year": 1990
+          },
+          {
+          "Borough": "Manhattan",
+          "Population": 1487536,
+          "year": 1990
+          },
+          {
+          "Borough": "Queens",
+          "Population": 1951598,
+          "year": 1990
+          },
+          {
+          "Borough": "Staten Island",
+          "Population": 378977,
+          "year": 1990
+          },
+          {
+          "Borough": "Bronx",
+          "Population": 1332650,
+          "year": 2000
+          },
+          {
+          "Borough": "Brooklyn",
+          "Population": 2465326,
+          "year": 2000
+          },
+          {
+          "Borough": "Manhattan",
+          "Population": 1537195,
+          "year": 2000
+          },
+          {
+          "Borough": "Queens",
+          "Population": 2229379,
+          "year": 2000
+          },
+          {
+          "Borough": "Staten Island",
+          "Population": 443728,
+          "year": 2000
+          },
+          {
+          "Borough": "Bronx",
+          "Population": 1385108,
+          "year": 2010
+          },
+          {
+          "Borough": "Brooklyn",
+          "Population": 2552911,
+          "year": 2010
+          },
+          {
+          "Borough": "Manhattan",
+          "Population": 1585873,
+          "year": 2010
+          },
+          {
+          "Borough": "Queens",
+          "Population": 2250002,
+          "year": 2010
+          },
+          {
+          "Borough": "Staten Island",
+          "Population": 468730,
+          "year": 2010
+          }
+          ]
+          },
+          "mark": "bar",
+          "encoding": {
+          "column": {
+          "field": "year",
+          "type": "ordinal"
+          },
+          "x": {
+          "field": "Borough",
+          "type": "nominal"
+          },
+          "y": {
+          "field": "Population",
+          "type": "quantitative"
+          },
+          "color": {
+          "field": "Borough",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+          "range": [
+          "#EFF5B7",
+          "#3E88AB",
+          "#16296C",
+          "#5FADAF",
+          "#EFF5B7"
+          ]
+          }
+          }
+          }
+          }
+          ;
+          vegaEmbed('#vis3', yourV3Spec);
       </script>
-    
+      
     <div id="vis"></div>
     <script type="text/javascript">
       var yourVlSpec = 
@@ -459,7 +459,7 @@ title: Dogs of New York City
       "point": true
       },
       "encoding": {
-      "x": {"field": "Year", "type": "temporal"},
+      "x": {"timeUnit":"utcyear","field": "Year", "type": "temporal"},
       "y": {"field": "Percentage", "type": "quantitative","title":"Share of Population(%)"},
       
       "color": {
