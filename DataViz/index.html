@@ -2,6 +2,7 @@
 layout: default
 title: Dogs of New York City
 ---
+
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.3.5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.2.1"></script>
@@ -341,6 +342,56 @@ title: Dogs of New York City
     <div class="stuff">
       <p class="head">The number of dogs in each borough does not appear to correlate with the human population. Despite having the largest dog population in 2016, Manhattan ranked as only the third most populous borough in 2010. Furthermore, the incidence of dog bites was highest among the three boroughs with the highest population of dogs: Manhattan, Queens, and Brooklyn. Although, reporting’s of dog bites were slightly higher in Queens this may be related to a variety of factors and may not indicate that dogs are more aggressive or actually bite more frequently in this borough.</p>
     </div>
+      
+    <div id="vis7"></div>
+      <script type="text/javascript">
+          var yourV7Spec = 
+          {
+          "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+          "data": {"url": "https://raw.githubusercontent.com/erikaweir/DataVisualizationFinalProject/master/top-10-breed-1.json"},
+          "title": "NYC Top 10 Dog Breed Bites (2015-2017)",
+          "width": 480,
+          "height": 360,
+          "transform": [
+          {
+          "filter": {
+          "field": "Breed",
+          "oneOf": [
+          "Pit Bull",
+          "Shih Tzu",
+          "American Pit Bull Terrier/Pit Bull",
+          "Chihuahua",
+          "American Pit Bull Mix / Pit Bull Mix",
+          "German Shepherd",
+          "Yorkshire Terrier",
+          "Maltese",
+          "Rottweiler",
+          "Labrador Retriever"
+          ]
+          }
+          }
+          ],
+          "mark": "bar",
+          "encoding": {
+          "x": {"field": "Borough", "type": "nominal"},
+          "y": {
+          "aggregate": "count",
+          "field": "UniqueID",
+          "type": "quantitative",
+          "axis": {"title": "Total Counts"}
+          },
+          "color": {
+          "field": "Breed",
+          "type": "nominal",
+          "scale": {
+          "range": ["#594F4F", "#547980", "#45ADA8", "#A2D4AB", "#E5EEC1"]
+          }
+          }
+          }
+          }
+          ;
+          vegaEmbed('#vis7', yourV7Spec);  
+      </script>
     
     <div id="vis"></div>
     <script type="text/javascript">
