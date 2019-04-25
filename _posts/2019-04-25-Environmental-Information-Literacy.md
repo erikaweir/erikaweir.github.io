@@ -3,7 +3,8 @@ layout: post
 title: "Environmental Information Literacy"
 date: 2019-04-25
 ---
-#Environmental Information Literacy
+Environmental Information Literacy
+===============
 
 As an undergraduate I petitioned the University of Illinois Board of Trustees to divest their endowment from fossil fuels. That campaign and experience fostered a life-long love of working with the public, which eventually led me to pursue a career in librarianship. Although my work now is no longer focused on educating the public about the dangers of fossil fuel consumption, being back on the same campus where I was involved in a deep community of environmental activism has led me to think critically about how those experiences inform my goals in librarianship.  A few months ago, I had my “aha” moment when I watched an archived keynote address Eira Tansey gave at the 2017 NDSA Conference. In it, she lays out the most convincing case I have heard for the role of LAM institutions in protecting the environment. 
 
