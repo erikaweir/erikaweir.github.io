@@ -19,3 +19,5 @@ In our current moment of extreme environmental degradation, it can be quite easy
 References
 ---------------
 McKibben, Bill. “To Stop Global Catastrophe, We Must Believe in Humans Again | Bill McKibben.” *The Guardian*, Guardian News and Media, 23 Apr. 2019, www.theguardian.com/commentisfree/2019/apr/23/stop-global-catastrophe-believe-humans-again-geoengineering. 
+
+Tansey, Eira. “The Necessary Knowledge.” NDSA Digital Preservation. NDSA Digital Preservation, Mar. 2019, Pittsburgh, forum2017.diglib.org/livestream-recordings/. 
